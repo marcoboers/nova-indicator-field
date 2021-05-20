@@ -1,10 +1,9 @@
 <template>
     <span class="whitespace-no-wrap" v-if="!field.shouldHide">
-        <span
-            class="inline-block indicator-grey rounded-full w-2 h-2 mr-1"
-            v-bind="colorClassStyle"
-        />
-        <span v-if="labelText">
+
+        <span v-if="labelText"
+              class="indicator-full-label"
+              v-bind="colorClassStyle">
             {{ labelText }}
         </span>
         <span v-else-if="field.unknownLabel && !field.withoutLabels">{{ field.unknownLabel }}</span>
